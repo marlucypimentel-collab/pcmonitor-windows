@@ -100,3 +100,17 @@ Remover apenas os fontes nao para a instalacao ativa.
 ## Licenca
 
 MIT. Consulte [LICENSE](LICENSE).
+## Assinatura local opcional
+
+Depois de compilar, execute `./Assinar.ps1` para incluir uma assinatura Authenticode
+com certificado local autoassinado (RSA 3072, SHA-256, validade de um ano).
+O certificado e criado em `CurrentUser\My`, com chave privada nao exportavel.
+Somente o certificado publico e exportado para `bin/PCmonitor-local.cer`.
+O script nao instala raizes confiaveis nem altera protecoes do Windows.
+
+Uma assinatura autoassinada pode aparecer como `UnknownError` ou `NotTrusted`,
+com mensagem de raiz nao confiavel. Ela nao equivale a um certificado comercial
+e nao garante que Defender, SmartScreen, Acesso controlado a pastas ou outros
+antivirus aceitem o programa. O monitor nao precisa de regra de firewall.
+Recompilar o executavel remove a assinatura; assine novamente antes de instalar.
+Nunca publique chaves privadas ou arquivos PFX.
