@@ -1,0 +1,17 @@
+bin/
+data/
+logs/
+*.exe
+*.pdb
+*.lnk
+*.zip
+*.csv
+errors-*.txt
+session-*.txt
+status.txt
+phase.txt
+markers.txt
+events.txt
+LEIA-ME.txt
+.vs/
+.vscode/
