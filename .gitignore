@@ -15,3 +15,7 @@ events.txt
 LEIA-ME.txt
 .vs/
 .vscode/
+*.pfx
+*.p12
+*.key
+*.cer
